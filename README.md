@@ -1,4 +1,4 @@
-# 🦺 Graphy
+# 👷 Graphy
 
 We're Currently Developing!
 
