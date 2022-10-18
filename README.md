@@ -4,6 +4,10 @@ We're Currently Developing!
 
 This module aims to acquire feature relathionship while EDA with graph representation. 
 
+## Sample Usage
+
+You can check [sample notebook](sample/sample.ipynb)
+
 ## How to Read
 - Each node (dots) refers to each feature. 
 - larger node size means that feature has more statistically meaningful relationship.
