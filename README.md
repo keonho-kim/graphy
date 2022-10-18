@@ -1,6 +1,9 @@
-# Graphy
+# 🦺 Graphy
+
+Currently Developing!
 
 This module aims to acquire feature relathionship while EDA with graph representation. 
+
 
 ## Example 
 
