@@ -40,8 +40,6 @@ Instead, all the variables will be located with circular layout.
 - pandas
 - numpy
 - networkx
-- graphviz
-- pygraphviz
 - matplotlib
 
 ## Future Updates

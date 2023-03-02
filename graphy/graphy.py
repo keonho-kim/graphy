@@ -171,7 +171,6 @@ class Graphier:
             edge_vmax=0,
             edge_color=negative_weights,
             edge_cmap=plt.cm.Blues_r,
-            style="dashed",
             ax=ax0,
         )
 
@@ -251,7 +250,6 @@ class Graphier:
             edge_vmax=0,
             edge_color=negative_weights,
             edge_cmap=plt.cm.Blues_r,
-            style="dashed",
             ax=ax2,
         )
         nx.draw_networkx_labels(
