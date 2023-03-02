@@ -2,11 +2,9 @@ class Graphier:
     import pandas as pd
 
     def __init__(
-        self, 
-        data: pd.DataFrame, 
-        target: str = None):
-        
-        import networkx as nx
+            self,
+            data: pd.DataFrame,
+            target: str = None):
 
         self.target = target
         self.data = data
@@ -20,11 +18,11 @@ class Graphier:
         self._label = {idx: col for idx, col in enumerate(self.feature)}
         self._inverted_label = {v: k for k, v in self._label.items()}
         self._node_pairs = []
-        self.Graph = nx.Graph()
+        self.Graph = None
 
     def _compute_correlation(
-            self, 
-            method: str = "pearson", 
+            self,
+            method: str = "pearson",
             corr_threshold: float = 0.15
     ):
 
@@ -62,9 +60,15 @@ class Graphier:
             return self
 
     def build_graph(self, statistics, method: str, corr_threshold: float = 0.15):
+        import networkx as nx
 
         if statistics == "correlation":
+            self.Graph = nx.Graph()
             self._compute_correlation(method=method, corr_threshold=corr_threshold)
+
+        elif statistics == "regression":
+            self.Graph = nx.DiGraph()
+            # Adding Regression Case
 
         self.Graph.add_nodes_from(self._label.keys())
         self.Graph.add_weighted_edges_from(self._node_pairs)
@@ -74,7 +78,7 @@ class Graphier:
     def draw_graph(
             self,
             path_to_save: str = None,
-            figsize=(20, 20),
+            figsize=(16, 16),
             node_size: float = 1,
             font_size: float = 1,
             edge_width=10,
@@ -82,7 +86,7 @@ class Graphier:
             coef_font_size: float = 1,
             label_pos_coef: float = 0.5,
     ):
-        
+
         import networkx as nx
         import matplotlib.pyplot as plt
         import numpy as np
@@ -100,7 +104,7 @@ class Graphier:
                 if d > 0
             ]
         )
-        
+
         negative_edges, negative_weights = zip(
             *[
                 (edge, d)
