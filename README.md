@@ -18,8 +18,12 @@ You can check [sample notebook](sample/sample.ipynb)
 
 ## Example 
 
-### With Target Feature
+### With Target Feature 
+
 ![sampleImgs1](sample_img/target.png)
+
+If you have any target variable it will be fixed at the center of the plot.
+
 
 ### Without Target Feature
 ![sampleImgs2](sample_img/no_target.png)
