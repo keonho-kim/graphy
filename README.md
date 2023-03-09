@@ -1,4 +1,4 @@
-# 👷 Graphy
+# 👷 Graphier
 
 Currently Developing!
 
