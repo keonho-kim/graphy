@@ -1,7 +1,10 @@
+# Personal Files
+
 .DS_Store
 .ipynb_checkpoints
 .virtual_documents
 .gitconfig
+test/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
