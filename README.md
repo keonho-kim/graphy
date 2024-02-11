@@ -16,24 +16,8 @@ You can check [sample notebook](sample/sample.ipynb)
 - higher saturation (more bold color) means stronger relationships
 
 
-## Example 
-
-### With Target Feature 
-
-![sampleImgs1](sample_img/target.png)
-
-If you have any target variable it will be fixed at the center of the plot.
-
-
-### Without Target Feature
-![sampleImgs2](sample_img/no_target.png)
-
-If you do not specify target, there would be no variable at the center.
-Instead, all the variables will be located with circular layout.
-
-
 ## Current Function
-- Correlation-based Graph (without Direction)
+- Correlation-based Graph (without direction)
 
 ## Requirements
 
